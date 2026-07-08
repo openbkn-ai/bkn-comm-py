@@ -1,5 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# Copyright openbkn.ai
+#
+# Licensed under the OpenBKN License.
+# See LICENSE-OPENBKN.txt in the project root.
+
 """
 DB-API 2.0 兼容性测试
 验证rdsdriver模块是否符合DB-API 2.0规范

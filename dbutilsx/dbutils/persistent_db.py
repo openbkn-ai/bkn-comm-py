@@ -1,3 +1,8 @@
+# Copyright openbkn.ai
+#
+# Licensed under the OpenBKN License.
+# See LICENSE-OPENBKN.txt in the project root.
+
 """PersistentDB - persistent DB-API 2 connections.
 
 Implements steady, thread-affine persistent connections to a database

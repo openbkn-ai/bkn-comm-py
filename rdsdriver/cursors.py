@@ -1,4 +1,8 @@
-# -*- coding: utf-8 -*-
+# Copyright openbkn.ai
+#
+# Licensed under the OpenBKN License.
+# See LICENSE-OPENBKN.txt in the project root.
+
 """
 定义统一的游标接口，包括字典游标和元组游标
 """

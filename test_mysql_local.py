@@ -1,5 +1,8 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
+# Copyright openbkn.ai
+#
+# Licensed under the OpenBKN License.
+# See LICENSE-OPENBKN.txt in the project root.
+
 """
 本地MySQL连接测试脚本
 """

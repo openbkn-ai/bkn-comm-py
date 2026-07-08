@@ -1,4 +1,8 @@
-# -*- coding: utf-8 -*-
+# Copyright openbkn.ai
+#
+# Licensed under the OpenBKN License.
+# See LICENSE-OPENBKN.txt in the project root.
+
 """
 RDS统一驱动封装层
 提供统一的数据库连接接口，内部根据db_type创建不同的driver实例

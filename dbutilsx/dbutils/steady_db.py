@@ -1,3 +1,8 @@
+# Copyright openbkn.ai
+#
+# Licensed under the OpenBKN License.
+# See LICENSE-OPENBKN.txt in the project root.
+
 """SteadyDB - hardened DB-API 2 connections.
 
 Implements steady connections to a database based on an

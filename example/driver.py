@@ -1,3 +1,8 @@
+# Copyright openbkn.ai
+#
+# Licensed under the OpenBKN License.
+# See LICENSE-OPENBKN.txt in the project root.
+
 import os
 
 os.environ["DB_TYPE"] = "MYSQL"

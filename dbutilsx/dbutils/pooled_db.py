@@ -1,3 +1,8 @@
+# Copyright openbkn.ai
+#
+# Licensed under the OpenBKN License.
+# See LICENSE-OPENBKN.txt in the project root.
+
 """PooledDB - pooling for DB-API 2 connections.
 
 Implements a pool of steady, thread-safe cached connections
