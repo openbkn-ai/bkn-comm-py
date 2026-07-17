@@ -27,10 +27,7 @@ jobs:
         # Integration tests under tests/ also need live DB env — keep them out of the default gate.
         run: python -m compileall -q dbutilsx rdsdriver
 
-      - name: Install PyMySQL (lightweight import smoke)
-        run: pip install "pymysql[rsa]>=1.2.0"
-
-      - name: Import smoke (MySQL path only)
-        # Avoid top-level `import rdsdriver` — it eagerly loads dmPython / ksycopg2.
+      - name: Import smoke (dbutilsx only)
+        # Avoid importing rdsdriver — package __init__ eagerly loads dm/kingbase backends.
         run: |
-          python -c "import rdsdriver.mysql; import dbutilsx.pooled_db; print('ok')"
+          python -c "import dbutilsx.pooled_db; print('ok')"
