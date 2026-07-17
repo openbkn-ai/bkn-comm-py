@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  ci:
+    name: ci
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile check
+        # Full pip install needs dmPython/ksycopg2 (native / commercial drivers).
+        # Integration tests under tests/ also need live DB env — keep them out of the default gate.
+        run: python -m compileall -q dbutilsx rdsdriver
+
+      - name: Install PyMySQL (lightweight import smoke)
+        run: pip install "pymysql[rsa]>=1.2.0"
+
+      - name: Import smoke (MySQL path only)
+        # Avoid top-level `import rdsdriver` — it eagerly loads dmPython / ksycopg2.
+        run: |
+          python -c "import rdsdriver.mysql; import dbutilsx.pooled_db; print('ok')"
